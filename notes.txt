@@ -1,0 +1,445 @@
+            Text
+                ↓
+            padding adds space around text
+                ↓
+            border draws box
+                ↓
+            margin creates space outside box
+            p        → tag selector
+                ↓
+            .text    → class selector
+                ↓
+            #title   → id selector
+                ↓
+            selector {
+            property: value;
+            }
+                ↓
+            .box {
+            padding: 10px;
+            border: 2px solid black;
+            margin: 20px;
+                ↓
+            The class selector selects HTML elements with a specific class attribute.
+            To select elements with a specific class, write a period (.) character, followed by the class name.
+                ↓
+                The id selector uses the id attribute of an HTML element to select a specific element.
+            The id of an element is unique within a page, so the id selector is used to select one unique element!
+            To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+                ↓
+            CSS selectors are used to "find" (or select) the HTML elements you want to style.
+            }
+
+
+        flex:1 = 1 piece of space
+        flex:2 = 2 pieces of space
+        flex:3 = 3 pieces of space 
+        Flexbox, flex controls how much space an element takes inside a flex container
+        example:
+            main {
+            flex: 2;
+            }
+        The element takes twice the space compared to an element with flex:1
+        total vh= 900 vh
+        flex:1 + flex:2
+        Box1 = 300px
+        Box2 = 600px
+
+
+        <div>
+            <h1>Heading</h1>
+            <p>Paragraph</p>
+        <div>
+
+            The element selector selects HTML elements based on the element name.
+
+            The universal selector (*) selects all HTML elements on the page.
+
+
+            h1, h2, p {
+        text-align: center;
+        color: red;
+        }
+
+        The grouping selector selects all the HTML elements with the same style definitions.
+
+
+        , symbol is used to group multiple selectors in a single CSS rule
+
+
+        rgb(red, green, blue)
+        Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.
+        or example, rgb(255, 0, 0) is displayed as red, because red is set to its highest value (255) and the others are set to 0.
+        To display black, set all color parameters to 0, like this: rgb(0, 0, 0).
+        To display white, set all color parameters to 255, like this: rgb(255, 255, 255).
+
+
+        RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity for a color.
+        An RGBA color value is specified with:
+        rgba(red, green, blue, alpha)
+        The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all)
+
+
+        A hexadecimal color is specified with: #RRGGBB.
+        In CSS, a color can be specified using a hexadecimal value in the form:
+        #rrggbb
+        Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).
+        For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).
+        To display black, set all values to 00, like this: #000000.
+        To display white, set all values to ff, like this: #ffffff.
+
+
+        The 3-digit hex code has the following form:
+        #rgb
+        Where r, g, and b represent the red, green, and blue components with values between 0 and f.
+        The 3-digit hex code can only be used when both the values (RR, GG, and BB) are the same for each component. 
+        So, if we have #ff00cc, it can be written like this: #f0c.
+
+
+        hsl(hue, saturation, lightness)
+        Hue is a degree on the color wheel (from 0 to 360):
+        0 (or 360) is red
+        120 is green
+        240 is blue
+        Saturation is a percentage value: 0% means a shade of gray, and 100% is the full color.
+        Lightness is also a percentage; 0% is black, 50% is neither light or dark, 100% is white.
+        hsl(0, 100%, 50%)
+
+
+        Saturation can be described as the intensity of a color.
+        100% is pure color, no shades of gray.
+        50% is 50% gray, but you can still see the color.
+        0% is completely gray; you can no longer see the color.
+
+
+        The lightness of a color can be described as how much light you want to give the color, where 0% means no light (black), 50% means 50% light (neither dark nor light) and 100% means full lightness (white).
+
+
+        HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a color.
+        An HSLA color value is specified with:
+        hsla(hue, saturation, lightness, alpha)
+        hsla(0, 100%, 50%, 0.5)
+
+
+        body {
+        background-image: url("paper.gif");
+        }
+
+
+        The background-image property specifies an image to use as the background of an element.
+        By default, the image is repeated so it covers the entire element.
+
+
+        body {
+        background-image: url("img_tree.png");
+        background-repeat: no-repeat;
+        }
+
+
+        To repeat an image only vertically, use background-repeat: repeat-y;
+
+
+        The background-position property is used to set the starting position of the background image.
+        By default, a background-image is placed at the top-left corner of an element.
+
+
+        The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):
+        body {
+        background-image: url("img_tree.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: fixed; Specify that the background image should be fixed
+        }
+
+        Specify that the background image should scroll with the rest of the page:
+        body {
+        background-image: url("img_tree.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: scroll;
+        }
+
+
+        Use the shorthand property to set all the background properties in one declaration:
+        body {
+        background: #ffffff url("img_tree.png") no-repeat right top;
+        }
+
+
+        The background property is a shorthand property for the following properties:
+        background-color
+        background-image
+        background-position
+        background-size
+        background-repeat
+        background-attachment
+        background-origin
+        background-clip
+        If some of the property values are missing, they will be set to their initial (default) values.
+
+
+        backgroundﾠSets all the background properties in one declaration
+        background-attachmentﾠSets whether a background image is fixed or scrolls with the rest of the page
+        background-clipﾠSpecifies the painting area of the background
+        background-colorﾠSets the background color of an element
+        background-imageﾠSets the background image for an element
+
+
+        background-originﾠSpecifies where the background image(s) is/are positioned
+        background-positionﾠSets the starting position of a background image
+        background-repeatﾠSets how a background image will be repeated
+        background-sizeﾠSpecifies the size of the background image(s)
+
+        const age = 13;
+undefined
+const name = "Aayan";
+undefined
+name =;
+VM1166:1 Uncaught SyntaxError: Unexpected token ';'
+
+name = "Jeff";
+let ingredient = "Egg";
+undefined
+ingredient = "Salt";
+'Salt'
+console.log(ingredient);
+undefined
+ingredient = "Pepper";
+'Pepper'
+console.log(ingredient);
+undefined
+let 123c;
+let 123c
+let c123
+undefined
+let c123 = eg;
+let c123 = "eg";
+console.log(c123)
+undefined
+console.log(c123[0]);
+undefined
+
+let x = 10;
+undefined
+x = 13;
+13
+console.log(x);
+VM358:1 13
+undefined
+x = 15;
+15
+console.log(x);
+VM437:1 15
+undefined
+const y = 10;
+undefined
+y = 13;
+VM512:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:3
+(anonymous) @ VM512:1
+
+console.log(y);
+VM593:1 10
+undefined
+x ==15;
+true
+x == 321;
+false
+let x = z;
+VM1808:1 Uncaught ReferenceError: z is not defined
+    at <anonymous>:1:9
+(anonymous) @ VM1808:1
+x === 15
+true
+let sum = x + y;
+undefined
+console.log(sum);
+VM2389:1 25
+undefined
+let diff = x - y;
+undefined
+console.log(diff);
+VM2591:1 5
+undefined
+let negdiff = y - x;
+undefined
+console.log(negdiff);
+VM2727:1 -5
+undefined
+let pro =  x * y;
+undefined
+console.log(pro);
+VM2861:1 150
+undefined
+let div = x / y;
+undefined
+console.log(div);
+VM2985:1 1.5
+undefined
+let exp = 5 + 6 / 100 * 291;
+undefined
+console.log(exp);
+VM3121:1 22.46
+undefined
+let ex = (5 + 6) / (100 * 291);
+undefined
+console.log(ex);
+VM3268:1 0.0003780068728522337
+undefined
+let concatenation = "Aayan" + "Kumar";
+undefined
+console.log(concatenation);
+VM3724:1 AayanKumar
+undefined
+let concatenation = "Aayan" + 1;
+undefined
+console.log(concatenation);
+VM3975:1 Aayan1
+undefined
+let concatenation = 1 + "Aayan";
+undefined
+console.log(concatenation);
+VM4005:1 1Aayan
+undefined
+let concatenation = 1 + " " + "Aayan";
+undefined
+console.log(concatenation);
+VM4024:1 1 Aayan
+undefined
+
+let person = "Aayan";
+undefined
+console.log(person);
+VM343:1 Aayan
+undefined
+let person="Aayan";
+undefined
+console.log(person);
+VM574:1 Aayan
+undefined
+let                       person                 =                "Aayan"                        ;
+undefined
+console.log(person);
+VM882:1 Aayan
+undefined
+function myfunction() {}
+undefined
+function myfunction() {console.log("Aayan")};
+
+undefined
+console.log(myfunction);
+VM1297:1 ƒ myfunction() {console.log("Aayan")}
+undefined
+myfunction()
+VM1194:1 Aayan
+undefined
+
+function sum() {let x = 1; let y = 20; let xy = x + y; console.log(xy)}
+undefined
+function sum() {let x = 1; let y = 20; let xy = x + y; console.log(xy)};
+undefined
+console.log(sum);
+VM2120:1 ƒ sum() {let x = 1; let y = 20; let xy = x + y; console.log(xy)}
+undefined
+sum
+ƒ sum() {let x = 1; let y = 20; let xy = x + y; console.log(xy)}
+sum()
+VM2052:1 21
+undefined
+
+🧠 1. What is Scope?
+👉 Scope = where a variable can be used (accessed)
+🧱 2. Block Scope (let, const)
+A block is anything inside { }
+{
+    let a = 10;
+    const b = 20;
+}
+👉 a and b exist only inside this block
+✅ Example
+if (true) {
+    let x = 5;
+    const y = 10;
+    console.log(x); // ✅ works
+}
+
+console.log(x); // ❌ error
+👉 Outside block → NOT accessible
+🌍 3. Function Scope (var)
+Variables declared with var belong to the entire function, not just block
+✅ Example
+function test() {
+    if (true) {
+        var x = 10;
+    }
+    console.log(x); // ✅ works
+}
+
+test();
+👉 Even though x is inside { }, it works outside → because of var
+⚠️ 4. Key Difference
+🔴 let / const → Block Scope
+if (true) {
+    let a = 10;
+}
+console.log(a); // ❌ error
+
+🟢 var → Function Scope
+if (true) {
+    var a = 10;
+}
+console.log(a); // ✅ works
+
+🎯
+5. Inside Functions
+let inside function
+function demo() {
+    let x = 5;
+}
+console.log(x); // ❌ error
+👉 Not accessible outside function
+var inside function
+function demo() {
+    var x = 5;
+}
+console.log(x); // ❌ still error
+👉 var is also limited to function (not global)
+🔍 6. Visual Understanding
+Block Scope
+IF BLOCK {
+   let x = 10  ❌ outside
+}
+
+Function Scope
+FUNCTION {
+   var x = 10  ✅ anywhere inside function
+}
+
+⚠️ 7. Real Problem with var
+for (var i = 0; i < 3; i++) {
+    // loop
+}
+console.log(i); // 😬 3 (leaks outside)
+
+✅ Fix with let
+for (let i = 0; i < 3; i++) {
+}
+console.log(i); // ❌ error
+👉 Cleaner and safer
+🧑‍🏫 8. Teaching Trick
+Explain like this:
+Block scope (let, const)
+👉 Room 🚪 → can’t go outside
+Function scope (var)
+👉 Whole house 🏠 → can move inside
+🚀 9. Best Practice
+✔ Always use:
+let
+const
+❌ Avoid:
+var (causes bugs)
+🎯 Final Summary
+Featureﾠlet / constﾠvar
+ScopeﾠBlockﾠFunction
+Safeﾠ✅ Yesﾠ❌ No
+Modernﾠ✅ Yesﾠ❌ Old

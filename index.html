@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html>
+        <head><title>Get Form</title>
+        <style>
+            body {
+                text-align:center;
+                background:rgb(196 254 246);
+                padding:30px;
+                border:30px;
+                margin:20px;
+            }
+            h1 {
+                font-family:cursive;
+                font-size:41px;
+                margin-bottom:30px;
+            }
+            label {
+                font-family:cursive;
+                margin:10px;
+                border:10px;
+                border-radius:20px;
+            }
+            input {
+                font-size:medium;
+                padding:5px;
+                margin:5px 5px 5px 5px;
+                border-radius:20px;
+            }
+            button {
+                margin-top:10px;
+                padding:10px;
+                cursor:pointer;
+                border:3px solid fuschia;
+                background:rgb(178, 255, 178);
+                border-radius:20px;
+            }
+            select {
+                margin:10px;
+                padding:10px;
+                border-radius:20px;
+            }
+        </style></head>
+        <body>
+            <h1>Student Information Form</h1>
+            <form action="submit.html" method="get"></form>
+                <label></label><input type="text" name="name" placeholder="Enter name" required>
+                <br>
+                <label></label><input type="number" name="age" placeholder="Enter age" required>
+                <br>
+                <select>
+                    <option value="" disabled selected hidden>Select grade level</option>
+                    <option value="">Grade 7</option>
+                    <option value="">Grade 8</option>
+                    <option value="">Grade 9</option>
+                </select>
+                <br>
+                <button type="submit">Get method</button>
+            </form>
+        </body>
+    </html>
+</DOCTYPE>
