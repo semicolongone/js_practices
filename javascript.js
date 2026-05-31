@@ -407,3 +407,4 @@ alert(x + y);
 //     sumsum = (sumsum + fruits[i]);
 // }
 // console.log(sumsum);
+
