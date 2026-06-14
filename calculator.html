@@ -15,41 +15,57 @@
     th {
         background-color:white;
     }
+
+    #screen {
+        margin:auto;
+        background-color:black;
+        color:white;
+        font-size:28px;
+        text-align:right;
+        padding:10px;
+        margin-bottom:0px;
+        width:194px;
+        overflow:hidden;
+    }
         </style>
     </head>
     <body>
         <!-- <h1>Calculator</h1> -->
+         <div>
+        <div id="screen">0</div>
         <table border="1" cellpadding="10" cellspacing="10">
             <tr>
-            <th><b>(</b></th>
-            <th><b>)</b></th>
-            <th><i class="fa-solid fa-c"></i></th>
-            <th><i class="fa-solid fa-delete-left"></i></th>
+            <th onclick="press('(')"><b>(</b></th>
+            <th onclick="press(')')"><b>)</b></th>
+            <th onclick="clearScreen()"><i class="fa-solid fa-c"></i></th>
+            <th onclick="backspace()"><i class="fa-solid fa-delete-left"></i></th>
         </tr>
         <tr>
-            <td><i class="fa-solid fa-7"></i></td>
-            <td><i class="fa-solid fa-8"></i></td>
-            <td><i class="fa-solid fa-9"></i></td>
-            <td><i class="fa-solid fa-divide"></i></td>
+            <td onclick="press('7')"><i class="fa-solid fa-7"></i></td>
+            <td onclick="press('8')"><i class="fa-solid fa-8"></i></td>
+            <td onclick="press('9')"><i class="fa-solid fa-9"></i></td>
+            <td onclick="press('/')"><i class="fa-solid fa-divide"></i></td>
         </tr>
         <tr>
-            <td><i class="fa-solid fa-4"></i></td>
-            <td><i class="fa-solid fa-5"></i></td>
-            <td><i class="fa-solid fa-6"></i></td>
-            <td><i class="fa-solid fa-xmark"></i></td>
+            <td onclick="press('4')"><i class="fa-solid fa-4"></i></td>
+            <td onclick="press('5')"><i class="fa-solid fa-5"></i></td>
+            <td onclick="press('6')"><i class="fa-solid fa-6"></i></td>
+            <td onclick="press('*')"><i class="fa-solid fa-xmark"></i></td>
         </tr>
         <tr>
-            <td><i class="fa-solid fa-1"></i></td>
-            <td><i class="fa-solid fa-2"></i></td>
-            <td><i class="fa-solid fa-3"></i></td>
-            <td><i class="fa-solid fa-minus"></i></td>
+            <td onclick="press('1')"><i class="fa-solid fa-1"></i></td>
+            <td onclick="press('2')"><i class="fa-solid fa-2"></i></td>
+            <td onclick="press('3')"><i class="fa-solid fa-3"></i></td>
+            <td onclick="press('-')"><i class="fa-solid fa-minus"></i></td>
         </tr>
         <tr>
-            <td><i class="fa-solid fa-0"></i></td>
-            <td><b>.</b></td>
-            <td><i class="fa-solid fa-equals"></i></td>
-            <td><i class="fa-solid fa-plus"></i></td>
+            <td onclick="press('0')"><i class="fa-solid fa-0"></i></td>
+            <td onclick="press('.')"><b>.</b></td>
+            <td onclick="calculate()"><i class="fa-solid fa-equals"></i></td>
+            <td onclick="press('+')"><i class="fa-solid fa-plus"></i></td>
         </tr>
         </table>
+        </div>
+        <script src="calculator.js"></script>
     </body>
 </html>
